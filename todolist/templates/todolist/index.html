@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'todolist/styles/index.css' %}" />
+</head>
+
+<nav>
+
+</nav>
+
+<body>
+    <div id = 'main'>
+        <p id="greeting">
+            Hello!
+        </p>
+        <p id="smth">
+            Second Line
+        </p>
+        {% for item in taskList %}
+            <div class="taskContainer">
+                <div class="taskText">
+                    <p class="task">
+                        {{ item.taskText }}
+                    </p>
+                </div>
+                <div class = "taskDeadLineDate">
+                    <p class="task">
+                        {{ item.deadLineDate }}
+                    </p>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+</body>
+</html>
