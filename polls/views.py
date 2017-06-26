@@ -6,6 +6,7 @@ from django.core.handlers.wsgi import WSGIRequest
 # Create your views here.
 
 def index(request):
+    print 'Were here'
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {
         'latest_question_list':latest_question_list,

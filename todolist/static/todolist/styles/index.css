@@ -26,6 +26,8 @@ p.task{
 
 div.taskContainer{
     width: 800px;
+    float: left;
+    margin: 10px;
 }
 
 div.taskText {
